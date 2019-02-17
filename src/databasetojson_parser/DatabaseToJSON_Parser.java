@@ -17,7 +17,9 @@ public class DatabaseToJSON_Parser {
     }
     
     public static JSONArray getJSONData(){
+        
         JSONArray results = new JSONArray();
+        
         Connection conn = null;
         PreparedStatement pstSelect = null, pstUpdate = null;
         ResultSet resultset = null;
@@ -33,7 +35,7 @@ public class DatabaseToJSON_Parser {
             
             /* Identify the Server */
             
-            String server = ("jdbc:mysql://localhost/db_test");
+            String server = ("jdbc:mysql://localhost/p2_test");
             String username = "root";
             String password = "CS488";
             System.out.println("Connecting to " + server + "...");
@@ -106,7 +108,7 @@ public class DatabaseToJSON_Parser {
                                 
                                 for(int j = 1; j <= columnCount; j++){
                                     
-                                    String colName = (String) colHeaders.get(i);
+                                    String colName = (String)colHeaders.get(i);
                                     
                                     currentSet.put(colHeaders.get(i), resultset.getString(colName));
                                     
