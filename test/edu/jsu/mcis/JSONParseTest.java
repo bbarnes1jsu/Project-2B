@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.json.simple.*;
 import org.json.simple.parser.*;
 
-import DatabaseToJSON_Parser.*;
+import databasetojson_parser.*;
 
 public class JSONParseTest {
     
